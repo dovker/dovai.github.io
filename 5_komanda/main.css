@@ -1,0 +1,173 @@
+
+
+body {
+    background:#fff;
+    font-family: 'Dosis', sans-serif;
+    color: #3c3c3c;
+    margin: 0;
+    text-decoration: none; 
+    text-rendering: geometricPrecision;
+    font-weight: normal !important;
+}
+
+h1, h2, h3, h4, h5, h6 { /*reset for mobile browsers */
+
+font-weight: normal;
+
+}
+
+nav {
+    
+}
+
+nav a {
+    background-position: center; 
+    font-size: 500%;
+    text-decoration: none;
+    color: white;
+    Height: 25%;
+    width: 100%;
+    position:absolute;
+    text-align: center;
+    vertical-align: middle;
+    transform: translate(-50%, -100%);
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+    
+    }
+
+/*Main Buttons*/
+
+.but1 {
+    background-image: url(images/art.png);
+    top: 25%;
+    vertical-align: middle;
+    }
+
+
+.but2 {
+    background-image: url(images/Games.png);
+    top: 50%;
+    vertical-align: middle;
+    
+}
+
+.but3 {
+    background-image: url(images/about.png);
+    top: 75%;
+    vertical-align: middle;
+}
+
+.but4 {
+    background-image: url(images/contact.png);
+    top: 100%;
+    vertical-align: middle;
+}
+
+.but1, .but2, .but3, .but4 {
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+
+.but1:hover, .but2:hover, .but3:hover, .but4:hover {
+    opacity: 0.7;
+    font-size: 600%;
+}
+
+/*Vid Buttons*/
+
+.vidbut1 {
+    Height: 50%;
+    width: 100%;
+    background-image: url(images/pixelartvideos.png);
+    top: 50%;
+    vertical-align: middle;
+    }
+
+
+.vidbut2 {
+    Height: 50%;
+    width: 100%;
+    background-image: url(images/Product%20Reviews.png);
+    top: 100%;
+    vertical-align: middle;
+}
+
+.vidbut1, .vidbut2 {
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+
+.vidbut1:hover, .vidbut2:hover, .vidbut3:hover, .vidbut4:hover {
+    opacity: 0.7;
+    font-size: 600%;
+}
+
+/*Art Buttons*/
+
+.artbut1 {
+    background-image: url(images/pixelart.png);
+    top: 25%;
+    vertical-align: middle;
+    
+    }
+
+
+.artbut2 {
+    background-image: url(images/Digital%20Art.png);
+    top: 50%;
+    vertical-align: middle;
+}
+
+.artbut3 {
+    background-image: url(images/design.png);
+    top: 75%;
+    vertical-align: middle;
+}
+
+.artbut4 {
+    background-image: url(images/photography.png);
+    top: 100%;
+    vertical-align: middle;
+}
+
+.artbut1, .artbut2, .artbut3, .artbut4 {
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+
+.artbut1:hover, .artbut2:hover, .artbut3:hover, .artbut4:hover {
+    opacity: 0.7;
+    font-size: 600%;
+}
+
+/*Logo*/
+
+ .logo {
+    text-decoration: none;
+    border-radius:100%;
+    background: #fff;
+    
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.logo:hover {
+    background:#676767;
+}
