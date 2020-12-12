@@ -11,14 +11,15 @@ body {
 
 
 
-.logo {
+.back {
     text-decoration: none;
-    border-radius:100%;
+    color: black;
+    border-radius:14%;
+    margin-left: 10px; 
+    font-size: 20px;
     background: #fff;
-    top: 56px;
-    left: 50%;
     position:fixed;
-    padding: 5px;
+    padding: 10px;
     transform: translate(-50%, -50%);
     -webkit-transition: 0.2s ease-in-out;
     -moz-transition: 0.2s ease-in-out;
@@ -28,26 +29,52 @@ body {
     
 }
 
-.logo:hover {
+.back:hover {
     background:#676767;
 }
 
-header {
+.title{
+    color: white;
+    font-size: 50px;
+    text-decoration: none;
+    left: 50%;
     position:fixed;
+    padding: 5px;
+    transform: translate(-50%, -50%);
+    
+}
+
+header {
+    position: fixed;
     width: 100%;
     background: #454545;
     padding:30px;
     box-shadow: 0px 1px 20px #3c3c3c;
     margin: 0;
-    
+    top: 0;
+    left: 0;
 }
-.photos {
-    padding: 50px 0 0 0;
+.photos {    
+    position: fixed;
     text-align: center;
+    top:50%;
+    transform: translate(0%, -50%);
+    overflow: visible;
+        overflow-y: scroll;
+    white-space: nowrap;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.photo
+{
+    display:inline-block;
     vertical-align: middle;
+    width: 100%;
 }
 img {
-    max-width:90%;
+    max-width:70%;
+    max-height: 80%;
 }
 
 a {
@@ -57,6 +84,10 @@ a {
     -moz-transition: 0.2s ease-in-out;
     -o-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
+}
+.aboutPage
+{
+    text-align: center;
 }
 a:hover{
     color: #11dd44;
@@ -101,5 +132,4 @@ iframe {
 }
 p {
     font-size: 30px;
-    
 }
