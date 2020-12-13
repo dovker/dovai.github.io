@@ -110,8 +110,8 @@ iframe {
     vertical-align: middle;
 }
 .logo2 {
-    border-radius: 100%;
-    width: 20%;
+    border-radius: 0%;
+    width: 70%;
     padding: 10px;
     background: #5e5e5e;
 }
