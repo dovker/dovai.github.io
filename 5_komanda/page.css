@@ -1,7 +1,5 @@
 html {
   scroll-behavior: smooth;
-overflow-x: hidden;
-
 }
 
 body {
@@ -64,10 +62,11 @@ header {
     left: 0;
 }
 .photos {    
-    position: fixed;
+    position:relative;
     text-align: center;
     top:50%;
     transform: translate(0%, -50%);
+    overflow-x: hidden;
     white-space: nowrap;
     max-width: 100%;
     max-height: 100%;
