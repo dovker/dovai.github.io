@@ -89,7 +89,7 @@ $(document).ready(function(){
         }
     });
     drawGallery(className, currentArray);
-    $(".photos").hScroll(40);
+    //$(".photos").hScroll(40);
     $(".photos").scroll(function(){
         colorChange($(this).scrollLeft(), currentArray);
     });

@@ -62,7 +62,7 @@ header {
     left: 0;
 }
 .photos {    
-    position:relative;
+    position:fixed;
     text-align: center;
     top:50%;
     transform: translate(0%, -50%);
