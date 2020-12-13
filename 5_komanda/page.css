@@ -72,6 +72,11 @@ header {
     max-height: 100%;
     
 }
+@media (max-width: 600px) {
+    .photos{
+        overflow: scroll;
+    }
+}
 
 .photo
 {
