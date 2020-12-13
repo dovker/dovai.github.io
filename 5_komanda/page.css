@@ -1,5 +1,7 @@
 html {
   scroll-behavior: smooth;
+overflow-x: hidden;
+
 }
 
 body {
@@ -66,7 +68,6 @@ header {
     text-align: center;
     top:50%;
     transform: translate(0%, -50%);
-    overflow-x: hidden;
     white-space: nowrap;
     max-width: 100%;
     max-height: 100%;

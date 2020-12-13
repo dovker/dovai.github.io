@@ -1,6 +1,6 @@
 const balkonai = [
     {
-        title: "LABAS BALAS SALAB SABAL",
+        title: "LAAS BALAS SALAB SABAL",
         image: "images/siena2.jpg",
         color: "#ffaaff"
     },
@@ -18,7 +18,7 @@ const balkonai = [
 ]
 const laikrodziai = [
     {
-        title: "LABAS BALAS laikrodziai SABAL",
+        title: "LAS BALAS laikrodziai SABAL",
         image: "images/siena2.jpg",
         color: "#00aacc"
     },
