@@ -32,7 +32,7 @@ body {
     -moz-transition: 0.2s ease-in-out;
     -o-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
-    box-shadow: 0px 1px 20px #3c3c3c;
+    box-shadow: 0px 1px 20px #3c3c3cbb;
     
 }
 
@@ -66,15 +66,34 @@ header {
     text-align: center;
     top:50%;
     transform: translate(0%, -50%);
-    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
     white-space: nowrap;
     max-width: 100%;
     max-height: 100%;
     
 }
+.bubbles{
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.bubble
+{
+    opacity: 29%;
+    margin: 5px;
+    display: inline-block;
+    width: 10px;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
 @media (max-width: 600px) {
     .photos{
-        overflow: scroll;
+        overflow-x: scroll;
     }
 }
 
@@ -84,9 +103,11 @@ header {
     vertical-align: middle;
     width: 100%;
 }
-img {
+.photo img {
     max-width:70%;
     max-height: 80%;
+    margin: 13px;
+    box-shadow: 0px 3px 15px #3c3c3c77;
 }
 
 a {
