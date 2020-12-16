@@ -39,6 +39,28 @@ body {
 .back:hover {
     background:#676767;
 }
+.info {
+    text-decoration: none;
+    color: black;
+    border-radius:14%;
+    margin-left: 10px; 
+    font-size: 20px;
+    background: #fff;
+    position:fixed;
+    left: 100%;
+    padding: 10px;
+    transform: translate(-150%, -50%);
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0px 1px 20px #3c3c3cbb;
+    
+}
+
+.info:hover {
+    background:#676767;
+}
 
 .title{
     color: white;
@@ -48,7 +70,10 @@ body {
     position:fixed;
     padding: 5px;
     transform: translate(-50%, -50%);
-    
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
 header {
@@ -60,6 +85,10 @@ header {
     margin: 0;
     top: 0;
     left: 0;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 .photos {    
     position:fixed;
@@ -91,11 +120,7 @@ header {
     -o-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
 }
-@media (max-width: 600px) {
-    .photos{
-        overflow-x: scroll;
-    }
-}
+
 
 .photo
 {
@@ -122,6 +147,27 @@ a {
 {
     text-align: center;
 }
+.pageText
+{
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+@media (max-width: 600px) {
+    .photos{
+        overflow-x: scroll;
+    }
+    .pageText
+    {
+        text-align: justify;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+}
+
 a:hover{
     color: #11dd44;
 }
@@ -158,10 +204,11 @@ iframe {
 }
 
 .head1 {
-    padding: 20px;
+    padding: 10px;
     background-color: #5e5e5e;
     color: white;
-    font-size: 600%;
+    font-size: 400%;
+    width: 100%;
 }
 p {
     font-size: 30px;

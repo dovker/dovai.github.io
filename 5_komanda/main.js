@@ -1,53 +1,60 @@
 const balkonai = [
     {
-        title: "LAAS BALAS SALAB SABAL",
+        title: "Maecenas a luctus neque",
         image: "images/siena2.jpg",
-        color: "#ffaaff"
+        color: "#b6a19d",
+        color2: "#644d40"
     },
     {
-        title: "LABAS BALAS",
+        title: "Vestibulum ante ipsum primis",
         image: "images/siena.jpg",
-        color: "#ffffff"
+        color: "#bdbeba",
+        color2: "#666159"
     },
     {
-        title: "LABAS SALAB SABAL",
-        image: "images/siena2.jpg",
-        color: "#ffaaaa"
+        title: "Curabitur luctus a mauris eget laoreet",
+        image: "images/traukiniai.jpg",
+        color: "#7d8995",
+        color2: "#3e4042"
+    },
+    {
+        title: "Etiam ornare sodales lacus ut pretium",
+        image: "images/traukiniai2.jpg",
+        color: "#f7e1d7",
+        color2: "#413127"
 
     },
     {
-        title: "LAAS BALAS SALAB SABAL",
-        image: "images/siena2.jpg",
-        color: "#ffaaff"
-    },
-    {
-        title: "LABAS BALAS",
+        title: "Cras id sapien lectus",
         image: "images/siena.jpg",
-        color: "#ffffff"
+        color: "#bdbeba",        
+        color2: "#666159"
     },
     {
-        title: "LABAS SALAB SABAL",
+        title: "Praesent sit amet augue ante.",
         image: "images/siena2.jpg",
-        color: "#ffaaaa"
-
+        color: "#b6a19d",
+        color2: "#644d40"
     }
 ]
 const laikrodziai = [
     {
         title: "LAS BALAS laikrodziai SABAL",
         image: "images/siena2.jpg",
-        color: "#00aacc"
+        color: "#00aacc",
+        color2: "#b6a19d"
     },
     {
         title: "LABAS BALAS",
         image: "images/siena.jpg",
-        color: "#ffffff"
+        color: "#ffffff",
+        color2: "#b6a19d"
     },
     {
         title: "LABAS SALAB SABAL",
         image: "images/siena2.jpg",
-        color: "#ffaaaa"
-
+        color: "#ffaaaa",
+        color2: "#b6a19d"
     }
 ]
 
@@ -99,11 +106,14 @@ function drawGallery(name, array)
     }).join('')}</div>`);
     
     $("body").css('background-color', array[0].color);
+    $("header").css('background-color', array[0].color2);
 }
 function colorChange(scroll, array)
 {
     var index = Math.floor((scroll+$(document).width()/2) / $(".photos").width());
     $("body").css('background-color', array[index].color);
+    $("header").css('background-color', array[index].color2);
+
     highlightBubbles(index, array);
 }
 
@@ -120,6 +130,24 @@ jQuery(function ($) {
         })
     };
 });
+jQuery(function ($) {
+    $.fn.addScroll = function (amount) {
+        position = $(this).scrollLeft();
+        position += amount;
+        position = Math.max(0, position);
+        position = Math.floor(position/$(".photos").width()) * $(".photos").width();
+        $(this).scrollLeft(position);
+    };
+});
+function handleKey(e)
+{
+    if(e.which == 39) {
+        $(".photos").addScroll($(document).width());
+    }
+    if(e.which == 37) {
+        $(".photos").addScroll(-$(document).width()/2);
+    }
+}
 
 $(document).ready(function(){
     var currentArray;
@@ -144,8 +172,11 @@ $(document).ready(function(){
     drawGallery(className, currentArray);
     drawBubbles(0, currentArray);
     highlightBubbles(0, currentArray);
-    $(".photos").hScroll(40);
+    $(".photos").hScroll(120);
     $(".photos").scroll(function(){
         colorChange($(this).scrollLeft(), currentArray);
+    });
+    $(document).keydown(function(e) {
+        handleKey(e);
     });
 });
