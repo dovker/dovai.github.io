@@ -127,10 +127,10 @@ header {
     display:inline-block;
     vertical-align: middle;
     width: 100%;
+    max-height: 70vh;
 }
 .photo img {
     max-width:70%;
-    max-height: 80%;
     margin: 13px;
     box-shadow: 0px 3px 15px #3c3c3c77;
 }
@@ -146,6 +146,7 @@ a {
 .page
 {
     text-align: center;
+    padding-top: 150px;
 }
 .pageText
 {
@@ -155,6 +156,21 @@ a {
     width: 50%;
 }
 
+.rect
+{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+.color
+{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.timeline{
+    width: 100%;
+}
 @media (max-width: 600px) {
     .photos{
         overflow-x: scroll;
@@ -166,6 +182,14 @@ a {
         margin-right: auto;
         width: 80%;
         font-size: 150%
+    }
+    .color
+{
+    width: 80%;
+}
+    .title
+    {
+        font-size: auto;
     }
 }
 

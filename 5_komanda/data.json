@@ -3,81 +3,181 @@
     {
         "balkonai" : [
             {
-                "title": "Maecenas a luctus neque",
-                "image": "images/siena2.jpg",
-                "color": "#b6a19d",
-                "color2": "#644d40"
-            },
-            {
-                "title": "Vestibulum ante ipsum primis",
-                "image": "images/siena.jpg",
-                "color": "#bdbeba",
-                "color2": "#666159"
-            },
-            {
-                "title": "Curabitur luctus a mauris eget laoreet",
-                "image": "images/traukiniai.jpg",
-                "color": "#7d8995",
-                "color2": "#3e4042"
-            },
-            {
-                "title": "Etiam ornare sodales lacus ut pretium",
-                "image": "images/traukiniai2.jpg",
-                "color": "#f7e1d7",
-                "color2": "#413127"
-
-            },
-            {
-                "title": "Cras id sapien lectus",
-                "image": "images/siena.jpg",
-                "color": "#bdbeba",        
-                "color2": "#666159"
-            },
-            {
-                "title": "Praesent sit amet augue ante.",
-                "image": "images/siena2.jpg",
-                "color": "#b6a19d",
-                "color2": "#644d40"
-            }
-        ],
-        "laikrodziai" : [
-            {
-                "title": "LAS BALAS laikrodziai SABAL",
-                "image": "images/siena2.jpg",
                 "color": "#00aacc",
                 "color2": "#b6a19d"
             },
             {
-                "title": "LABAS BALAS",
-                "image": "images/siena.jpg",
                 "color": "#ffffff",
                 "color2": "#b6a19d"
             },
             {
-                "title": "LABAS SALAB SABAL",
-                "image": "images/siena2.jpg",
+                "color": "#ffaaaa",
+                "color2": "#b6a19d"
+            }
+        ],
+        "laikrodziai" : [
+            {
+                "color": "#00aacc",
+                "color2": "#b6a19d"
+            },
+            {
+                "color": "#ffffff",
+                "color2": "#b6a19d"
+            },
+            {
                 "color": "#ffaaaa",
                 "color2": "#b6a19d"
             }
         ],
         "vietos_be_siuksliadeziu" : [
             {
-                "title": "LAS BALAS laikrodziai SABAL",
-                "image": "images/siena2.jpg",
-                "color": "#00aacc",
-                "color2": "#b6a19d"
+                "color": "#c8c8c8",
+                "color2": "#006464"
             },
             {
-                "title": "LABAS BALAS",
-                "image": "images/siena.jpg",
-                "color": "#ffffff",
-                "color2": "#b6a19d"
+                "color": "#ffc8c8",
+                "color2": "#c86464"
             },
             {
-                "title": "LABAS SALAB SABAL",
-                "image": "images/siena2.jpg",
-                "color": "#ffaaaa",
-                "color2": "#b6a19d"
+                "color": "#ced5e2",
+                "color2": "#91878a"
+            },
+            {
+                "color": "#c86464",
+                "color2": "#640000"
+
+            },
+            {
+                "color": "#ccd4db",        
+                "color2": "#685f54"
+            },
+            {
+                "color": "#b9c1c7",
+                "color2": "#585553"
+            },
+            {
+                "color": "#a38d72",
+                "color2": "#3b3229"
+            },
+            {
+                "color": "#847976",
+                "color2": "#2a211a"
+            },
+            {
+                "color": "#0980ab",
+                "color2": "#175587"
+            },
+            {
+                "color": "#cfd4d8",
+                "color2": "#06678a"
+            },
+            {
+                "color": "#75716c",
+                "color2": "#403a31"
+            },
+            {
+                "color": "#85877e",
+                "color2": "#393324"
+            },
+            {
+                "color": "#98948d",
+                "color2": "#403321"
+            },
+            {
+                "color": "#a79f9d",
+                "color2": "#312920"
+            },
+            {
+                "color": "#c8d3e1",
+                "color2": "#6d7073"
+            },
+            {
+                "color": "#8d9295",
+                "color2": "#51514e"
+            },
+            {
+                "color": "#d5d0c9",
+                "color2": "#216677"
+            },
+            {
+                "color": "#878685",
+                "color2": "#332d20"
+            },
+            {
+                "color": "#99a1b4",
+                "color2": "#322c23"
+            },
+            {
+                "color": "#8b705b",
+                "color2": "#322717"
+            },
+            {
+                "color": "#b19779",
+                "color2": "#422a18"
+            },
+            {
+                "color": "#a0958a",
+                "color2": "#3f3d2b"
+            },
+            {
+                "color": "#939896",
+                "color2": "#74726b"
+            },
+            {
+                "color": "#ddd1c2",
+                "color2": "#4e4135"
+            },
+            {
+                "color": "#cbc3c5",
+                "color2": "#756e6d"
+            },
+            {
+                "color": "#c3c7d8",
+                "color2": "#786962"
+            },
+            {
+                "color": "#d2d8ed",
+                "color2": "#88828d"
+            },
+            {
+                "color": "#c7c2b7",
+                "color2": "#a6947b"
+            },
+            {
+                "color": "#bdb5b0",
+                "color2": "#a47c67"
+            },
+            {
+                "color": "#c7cad9",
+                "color2": "#ba6d53"
+            },
+            {
+                "color": "#a2937f",
+                "color2": "#967558"
+            },
+            {
+                "color": "#beac89",
+                "color2": "#977c58"
+            },
+            {
+                "color": "#a1675a",
+                "color2": "#6a4a44"
+            },
+            {
+                "color": "#9292a5",
+                "color2": "#574a47"
+            },
+            {
+                "color": "#8f9594",
+                "color2": "#2e271f"
+            },
+            {
+                "color": "#bc8135",
+                "color2": "#7e5228"
+            },
+            {
+                "color": "#95b4c4",
+                "color2": "#70765d"
             }
         ]
     }

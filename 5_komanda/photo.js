@@ -37,11 +37,21 @@ function highlightBubbles(index, array)
 
 function drawGallery(name, array)
 {
-    $(name).append(`<div class="photos">${array.map(function(image){
-        return `<div  class="photo"> <img src="${image.image}">
-              <p>
-                  ${image.title}
-              </p>
+    var filepath;
+    switch(name)
+            {
+        case '.balkonai': 
+            filepath = "images/siuksliadezes/";
+            break;
+        case '.vietos_be_siuksliadeziu':
+            filepath = "images/siuksliadezes/";
+            break;
+        case '.laikrodziai':
+            filepath = "images/siuksliadezes/";
+                break;
+    }
+    $(name).append(`<div class="photos">${array.map(function(image, index){
+        return `<div  class="photo"> <img src="${(filepath + (index+1) + "_be_siuksl.jpg")}">
           </div>`
     }).join('')}</div>`);
     
@@ -111,7 +121,7 @@ $(document).ready(function(){
                 currentArray = json.data.balkonai;
                 className = '.balkonai';
                 break;
-            case 'vietos_be_siuskliadeziu':
+            case 'vietos_be_siuksliadeziu':
                 currentArray = json.data.vietos_be_siuksliadeziu;
                 className = '.vietos_be_siuksliadeziu';
                 break;
@@ -119,6 +129,8 @@ $(document).ready(function(){
                 currentArray = json.data.laikrodziai;
                 className = '.laikrodziai';
                 break;
+            default:
+                console.log("ERROR, NO JSON FOR THIS CLASS");
         }
     });
     drawGallery(className, currentArray);
