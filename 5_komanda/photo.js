@@ -1,63 +1,3 @@
-const balkonai = [
-    {
-        title: "Maecenas a luctus neque",
-        image: "images/siena2.jpg",
-        color: "#b6a19d",
-        color2: "#644d40"
-    },
-    {
-        title: "Vestibulum ante ipsum primis",
-        image: "images/siena.jpg",
-        color: "#bdbeba",
-        color2: "#666159"
-    },
-    {
-        title: "Curabitur luctus a mauris eget laoreet",
-        image: "images/traukiniai.jpg",
-        color: "#7d8995",
-        color2: "#3e4042"
-    },
-    {
-        title: "Etiam ornare sodales lacus ut pretium",
-        image: "images/traukiniai2.jpg",
-        color: "#f7e1d7",
-        color2: "#413127"
-
-    },
-    {
-        title: "Cras id sapien lectus",
-        image: "images/siena.jpg",
-        color: "#bdbeba",        
-        color2: "#666159"
-    },
-    {
-        title: "Praesent sit amet augue ante.",
-        image: "images/siena2.jpg",
-        color: "#b6a19d",
-        color2: "#644d40"
-    }
-]
-const laikrodziai = [
-    {
-        title: "LAS BALAS laikrodziai SABAL",
-        image: "images/siena2.jpg",
-        color: "#00aacc",
-        color2: "#b6a19d"
-    },
-    {
-        title: "LABAS BALAS",
-        image: "images/siena.jpg",
-        color: "#ffffff",
-        color2: "#b6a19d"
-    },
-    {
-        title: "LABAS SALAB SABAL",
-        image: "images/siena2.jpg",
-        color: "#ffaaaa",
-        color2: "#b6a19d"
-    }
-]
-
 function drawBubbles(index, array)
 {
     var str = "";
@@ -148,23 +88,35 @@ function handleKey(e)
         $(".photos").addScroll(-$(document).width()/2);
     }
 }
-
+function LoadFile(file)
+{
+    
+}
 $(document).ready(function(){
+    var request = $.ajax({
+        url: 'data.json',
+        dataType:'text',
+        type: 'get',
+        cache: false,
+        async: false //CHANGE SOME DAY
+    });
+    var json = JSON.parse(request.responseText);
+    console.log(json);
     var currentArray;
     var className;
     var classList = $('body').attr('class').split(/\s+/);
     $.each(classList, function(index, item) {
         switch(item){
             case 'balkonai': 
-                currentArray = balkonai;
+                currentArray = json.data.balkonai;
                 className = '.balkonai';
                 break;
             case 'vietos_be_siuskliadeziu':
-                currentArray = balkonai;
+                currentArray = json.data.vietos_be_siuksliadeziu;
                 className = '.vietos_be_siuksliadeziu';
                 break;
             case 'laikrodziai':
-                currentArray = laikrodziai;
+                currentArray = json.data.laikrodziai;
                 className = '.laikrodziai';
                 break;
         }
