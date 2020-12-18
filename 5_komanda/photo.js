@@ -37,21 +37,24 @@ function highlightBubbles(index, array)
 
 function drawGallery(name, array)
 {
-    var filepath;
+    var filepath, ext;
     switch(name)
             {
         case '.balkonai': 
-            filepath = "images/siuksliadezes/";
+            filepath = "images/balkonai/";
+            ext = "_balkonai.jpg";
             break;
         case '.vietos_be_siuksliadeziu':
             filepath = "images/siuksliadezes/";
+            ext = "_be_siuksl.jpg";
             break;
         case '.laikrodziai':
-            filepath = "images/siuksliadezes/";
+            filepath = "images/laikrodziai/";
+            ext = "_laikrodziai.jpg";
                 break;
     }
     $(name).append(`<div class="photos">${array.map(function(image, index){
-        return `<div  class="photo"> <img src="${(filepath + (index+1) + "_be_siuksl.jpg")}">
+        return `<div  class="photo"> <img src="${(filepath + (index+1) + ext)}">
           </div>`
     }).join('')}</div>`);
     
@@ -92,7 +95,7 @@ jQuery(function ($) {
 function handleKey(e)
 {
     if(e.which == 39) {
-        $(".photos").addScroll($(document).width());
+        $(".photos").addScroll($(document).width()+1);
     }
     if(e.which == 37) {
         $(".photos").addScroll(-$(document).width()/2);

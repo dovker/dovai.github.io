@@ -41,21 +41,21 @@ nav a {
 /*Main Buttons*/
 
 .but1 {
-    background-image: url(images/traukiniai.jpg);
+    background-image: url(images/siuksliadezes/20_be_siuksl.jpg);
     top: 25%;
     vertical-align: middle;
     }
 
 
 .but2 {
-    background-image: url(images/Maketo%20pav.png);
+    background-image: url(images/Laikrodis.jpg);
     top: 50%;
     vertical-align: middle;
     
 }
 
 .but3 {
-    background-image: url(images/siena.jpg);
+    background-image: url(images/balkonai/5_balkonai.jpg);
     top: 75%;
     vertical-align: middle;
 }

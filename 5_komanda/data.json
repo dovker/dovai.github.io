@@ -3,30 +3,142 @@
     {
         "balkonai" : [
             {
-                "color": "#00aacc",
-                "color2": "#b6a19d"
+                "color": "#9c9595 ",
+                "color2": "#776d61"
             },
             {
-                "color": "#ffffff",
-                "color2": "#b6a19d"
+                "color": "#e6e8ed",
+                "color2": "#b89c75"
             },
             {
-                "color": "#ffaaaa",
-                "color2": "#b6a19d"
+                "color": "#a8665a ",
+                "color2": "#814739"
+            },
+            {
+                "color": "#42464c ",
+                "color2": "#81888d"
+            },
+            {
+                "color": "#cab9a2 ",
+                "color2": "#695f55"
+            },
+            {
+                "color": "#a54a49 ",
+                "color2": "#483946"
+            },
+            {
+                "color": "#6f6852 ",
+                "color2": "#2c302d"
+            },
+            {
+                "color": "#cbd4c8",
+                "color2": "#b1a98e"
+            },
+            {
+                "color": "#b1854f ",
+                "color2": "#564e4b"
+            },
+            {
+                "color": "#925334 ",
+                "color2": "#542f20"
+            },
+            {
+                "color": "#c26a31 ",
+                "color2": "#686253"
+            },
+            {
+                "color": "#b19a82 ",
+                "color2": "#b4bdbc"
+            },
+            {
+                "color": "#514047 ",
+                "color2": "#716b73"
+            },
+            {
+                "color": "#798392 ",
+                "color2": "#b3a086"
+            },
+            {
+                "color": "#9a8259 ",
+                "color2": "#46595b"
+            },
+            {
+                "color": "#b19e83 ",
+                "color2": "#7195a2"
+            },
+            {
+                "color": "#9c9070 ",
+                "color2": "#494c4f"
+            },
+            {
+                "color": "#81858b ",
+                "color2": "#acb5bf"
             }
         ],
         "laikrodziai" : [
             {
-                "color": "#00aacc",
-                "color2": "#b6a19d"
+                "color": "#625655",
+                "color2": "#7d6e65"
             },
             {
-                "color": "#ffffff",
-                "color2": "#b6a19d"
+                "color": "#9a8562",
+                "color2": "#331d26"
             },
             {
-                "color": "#ffaaaa",
-                "color2": "#b6a19d"
+                "color": "#d9d3d0",
+                "color2": "#817b76"
+            },
+            {
+                "color": "#a8a58d",
+                "color2": "#7f7362"
+            },
+            {
+                "color": "#cfcbd0",
+                "color2": "#6d5847"
+            },
+            {
+                "color": "#a6a6b3",
+                "color2": "#08060a"
+            },
+            {
+                "color": "#9a8614",
+                "color2": "#2f291c"
+            },
+            {
+                "color": "#523f0a",
+                "color2": "#211e20"
+            },
+            {
+                "color": "#aca3be",
+                "color2": "#8e0105"
+            },
+            {
+                "color": "#9b9b02",
+                "color2": "#28201c"
+            },
+            {
+                "color": "#c29d22",
+                "color2": "#027c17"
+            },
+            {
+                "color": "#aebdd8",
+                "color2": "#202e32"
+            },
+            {
+                "color": "#b2c5ed",
+                "color2": "#1f2324"
+            },
+            {
+                "color": "#a3b8e0",
+                "color2": "#463c32"
+            },
+            {
+                "color": "#b7c198",
+                "color2": "#404b72"
+            },
+            {
+                "color": "#84a798",
+                "color2": "#1d244b"
             }
         ],
         "vietos_be_siuksliadeziu" : [
