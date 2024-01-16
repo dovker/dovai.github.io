@@ -45,14 +45,11 @@ function loadShader(url) {
 
 const createScene = function()
 {
-    // Scene creation
     var scene = new BABYLON.Scene(engine);
     
-    // Fullscreen quad creation
     var quad = BABYLON.MeshBuilder.CreatePlane("quad", { size: 2 }, scene);
-    quad.position.z = 1; // Move the quad forward to be in front of the camera
+    quad.position.z = 0;
     
-    // Camera setup
     var camera = new BABYLON.FreeCamera("camera", new BABYLON.Vector3(0, 0, -1), scene);
     camera.mode = BABYLON.Camera.ORTHOGRAPHIC_CAMERA;
     camera.orthoLeft = -1;
@@ -60,11 +57,11 @@ const createScene = function()
     camera.orthoTop = 1;
     camera.orthoBottom = -1;
 
-    // Custom shaders
+
+
     BABYLON.Effect.ShadersStore["customVertexShader"]  = loadShader("vs.glsl");
     BABYLON.Effect.ShadersStore["customFragmentShader"]  = loadShader("fs.glsl");
 
-    // Create materials with custom shaders
     var shaderMaterial = new BABYLON.ShaderMaterial("shader", scene, {
         vertex: "custom",
         fragment: "custom",
@@ -74,8 +71,9 @@ const createScene = function()
         uniforms: ["worldViewProjection", "FocalPoint", "SquareCount", "Resolution", "Position", "Scale"]
     });
 
-    // Assign the material to the quad
     quad.material = shaderMaterial;
+
+
 
     var position = new BABYLON.Vector2(0.0, 0.0);
     var scale = 1.0;
@@ -105,7 +103,6 @@ const createScene = function()
         }
     });
 
-    // Create sliders
     createSlider("Foci X Position:", "xPosition", -10, 10, 0.1, -1, function (value) {
         updateSliderValue("xPosition", value);
         updateUniforms();
@@ -116,7 +113,6 @@ const createScene = function()
         updateUniforms();
     });
     
-
     createSlider("Square Subdivisions:", "squareCount", 1, 10, 1, 1, function (value) {
         updateSliderValue("squareCount", value);
         updateUniforms();
@@ -152,12 +148,10 @@ const createScene = function()
 
 const scene = createScene();
 
-// Render loop
 engine.runRenderLoop(function () {
     scene.render();
 });
 
-// Handle window resize
 window.addEventListener("resize", function () {
     engine.resize();
     updateUniforms();
