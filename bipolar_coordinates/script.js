@@ -109,22 +109,19 @@ const createScene = function()
 
     createSlider("Foci X Position:", "xPosition", -10, 10, 0.1, -1, function (value) {
         updateSliderValue("xPosition", value);
-        updateUniforms();
     });
 
     createSlider("Foci Y Position:", "yPosition", -10, 10, 0.1, 0, function (value) {
         updateSliderValue("yPosition", value);
-        updateUniforms();
     });
     
     createSlider("Square Subdivisions:", "squareCount", 1, 10, 1, 1, function (value) {
         updateSliderValue("squareCount", value);
-        updateUniforms();
     });
 
     createSlider("Scale:", "scaleSlider", 0.01, 2, 0.01, 1, function (value) {
         updateSliderValue("scaleSlider", value);
-        updateUniforms();
+        upcomingScale = value;
     });
 
     function updateSliderValue(sliderId, value) {
@@ -132,7 +129,6 @@ const createScene = function()
         if (valueElement) {
             valueElement.textContent = value;
         }
-        upcomingScale = value;
     }
 
     updateUniforms = function ()
