@@ -43,6 +43,13 @@ function loadShader(url) {
     }
 }
 
+var position = new BABYLON.Vector2(0.0, 0.0);
+var upcomingPosition = new BABYLON.Vector2(0.0, 0.0);
+var scale = 1.0;
+var upcomingScale = 1.0;
+
+var updateUniforms = function(){};
+
 const createScene = function()
 {
     var scene = new BABYLON.Scene(engine);
@@ -74,10 +81,6 @@ const createScene = function()
     quad.material = shaderMaterial;
 
 
-
-    var position = new BABYLON.Vector2(0.0, 0.0);
-    var scale = 1.0;
-
     var isDragging = false;
     var lastPointerX;
     var lastPointerY;
@@ -95,13 +98,14 @@ const createScene = function()
             var deltaX = pointerInfo.event.clientX - lastPointerX;
             var deltaY = pointerInfo.event.clientY - lastPointerY;
 
-            position.x -= deltaX;
-            position.y += deltaY;
+            upcomingPosition.x -= deltaX;
+            upcomingPosition.y += deltaY;
 
             lastPointerX = pointerInfo.event.clientX;
             lastPointerY = pointerInfo.event.clientY;
         }
     });
+
 
     createSlider("Foci X Position:", "xPosition", -10, 10, 0.1, -1, function (value) {
         updateSliderValue("xPosition", value);
@@ -128,16 +132,17 @@ const createScene = function()
         if (valueElement) {
             valueElement.textContent = value;
         }
+        upcomingScale = value;
     }
 
-    function updateUniforms()
+    updateUniforms = function ()
     {
         shaderMaterial.setVector2("FocalPoint", new BABYLON.Vector2(parseFloat(document.getElementById("xPosition").value), 
                                                                 parseFloat(document.getElementById("yPosition").value)));
         shaderMaterial.setFloat("SquareCount", parseFloat(document.getElementById("squareCount").value));
         shaderMaterial.setVector2("Resolution", new BABYLON.Vector2(engine.getRenderWidth(), engine.getRenderHeight()));
         shaderMaterial.setVector2("Position", position);
-        shaderMaterial.setFloat("Scale", parseFloat(document.getElementById("scaleSlider").value));
+        shaderMaterial.setFloat("Scale", scale);
     }
     updateUniforms();
 
@@ -149,6 +154,11 @@ const createScene = function()
 const scene = createScene();
 
 engine.runRenderLoop(function () {
+    position.x = BABYLON.Scalar.Lerp(position.x, upcomingPosition.x, 0.15);
+    position.y = BABYLON.Scalar.Lerp(position.y, upcomingPosition.y, 0.25);
+    scale = BABYLON.Scalar.Lerp(scale, upcomingScale, 0.25);
+    updateUniforms();
+
     scene.render();
 });
 
