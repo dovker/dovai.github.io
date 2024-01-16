@@ -23,7 +23,7 @@ void main(void) {
 
     vec2 v1 = FocalPoint - uv;
     vec2 v2 = -FocalPoint - uv;
-    float s = acos(dot(v1,v2)/(length(v1)*length(v2)));
+    float s = sign(uv.y)*acos(dot(v1,v2)/(length(v1)*length(v2)));
     vec2 st = vec2(s, t);
 
 
