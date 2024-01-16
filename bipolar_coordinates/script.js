@@ -115,13 +115,13 @@ const createScene = function()
         updateSliderValue("yPosition", value);
     });
     
-    createSlider("Square Subdivisions:", "squareCount", 1, 10, 1, 1, function (value) {
+    createSlider("Square Subdivisions:", "squareCount", 0.1, 10, 0.01, 1, function (value) {
         updateSliderValue("squareCount", value);
     });
 
     createSlider("Scale:", "scaleSlider", 0.01, 2, 0.01, 1, function (value) {
         updateSliderValue("scaleSlider", value);
-        upcomingScale = value;
+         upcomingScale = value;
     });
 
     function updateSliderValue(sliderId, value) {
