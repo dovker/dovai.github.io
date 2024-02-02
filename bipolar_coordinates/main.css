@@ -20,7 +20,7 @@ body {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
 }
 input[type="range"] {
     width: 200px;

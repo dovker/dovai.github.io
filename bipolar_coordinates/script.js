@@ -75,7 +75,7 @@ const createScene = function()
     },
     {
         attributes: ["position", "uv"],
-        uniforms: ["worldViewProjection", "FocalPoint", "SquareCount", "Resolution", "Position", "Scale"]
+        uniforms: ["worldViewProjection", "FocalPoint", "FocalPoint2", "SquareCount", "Resolution", "Position", "Scale"]
     });
 
     quad.material = shaderMaterial;
@@ -114,12 +114,20 @@ const createScene = function()
     createSlider("Foci Y Position:", "yPosition", -10, 10, 0.1, 0, function (value) {
         updateSliderValue("yPosition", value);
     });
+
+    createSlider("2nd Foci X Position:", "xPosition2", -10, 10, 0.1, -1, function (value) {
+        updateSliderValue("xPosition2", value);
+    });
+
+    createSlider("2nd Foci Y Position:", "yPosition2", -10, 10, 0.1, 0, function (value) {
+        updateSliderValue("yPosition2", value);
+    });
     
     createSlider("Square Subdivisions:", "squareCount", 0.1, 10, 0.01, 1, function (value) {
         updateSliderValue("squareCount", value);
     });
 
-    createSlider("Scale:", "scaleSlider", 0.01, 2, 0.01, 1, function (value) {
+    createSlider("Scale:", "scaleSlider", 0.01, 5, 0.01, 1, function (value) {
         updateSliderValue("scaleSlider", value);
          upcomingScale = value;
     });
@@ -135,6 +143,8 @@ const createScene = function()
     {
         shaderMaterial.setVector2("FocalPoint", new BABYLON.Vector2(parseFloat(document.getElementById("xPosition").value), 
                                                                 parseFloat(document.getElementById("yPosition").value)));
+        shaderMaterial.setVector2("FocalPoint2", new BABYLON.Vector2(parseFloat(document.getElementById("xPosition2").value), 
+                                                                parseFloat(document.getElementById("yPosition2").value)));
         shaderMaterial.setFloat("SquareCount", parseFloat(document.getElementById("squareCount").value));
         shaderMaterial.setVector2("Resolution", new BABYLON.Vector2(engine.getRenderWidth(), engine.getRenderHeight()));
         shaderMaterial.setVector2("Position", position);
